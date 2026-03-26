@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__cuik__get_backlinks",
+      "mcp__cuik__list_gsc_domains",
+      "mcp__cuik__fetch_pages",
+      "mcp__cuik__get_ranked_keywords",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm)",
+      "Bash(printf 'No\\\\nNo\\\\n')",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm --turbopack)",
+      "Bash(yes \"No\")"
+    ]
+  }
+}
