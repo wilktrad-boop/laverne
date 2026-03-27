@@ -2,8 +2,6 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { categories } from "@/lib/categories";
 
-export const dynamic = "force-static";
-
 const baseUrl = "https://agencelavernepaysagistes.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
