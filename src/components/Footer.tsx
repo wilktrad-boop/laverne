@@ -23,7 +23,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <span className="text-2xl">🌿</span>
               <span className="font-heading text-lg font-bold text-white">
-                Maison & Travaux
+                Agence Laverne
               </span>
             </Link>
             <p className="text-sm text-green-300 leading-relaxed">

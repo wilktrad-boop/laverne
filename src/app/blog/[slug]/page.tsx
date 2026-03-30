@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Breadcrumb from "@/components/Breadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { categories } from "@/lib/categories";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -45,12 +48,12 @@ export default async function BlogPost({ params }: Props) {
     datePublished: post.date,
     author: {
       "@type": "Organization",
-      name: "Maison & Travaux",
+      name: "Agence Laverne",
     },
     publisher: {
       "@type": "Organization",
-      name: "Maison & Travaux",
-      url: "https://agencelavernepaysagistes.fr",
+      name: "Agence Laverne",
+      url: "https://www.agencelavernepaysagistes.fr",
     },
   };
 
@@ -71,9 +74,23 @@ export default async function BlogPost({ params }: Props) {
           />
           <div className="mt-6">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-xs font-heading font-medium text-green-600 bg-green-100 px-2.5 py-1 rounded-full">
-                {post.category}
-              </span>
+              {(() => {
+                const cat = categories.find(
+                  (c) => c.title.toLowerCase() === post.category.toLowerCase()
+                );
+                return cat ? (
+                  <Link
+                    href={`/${cat.slug}`}
+                    className="text-xs font-heading font-medium text-green-600 bg-green-100 px-2.5 py-1 rounded-full hover:bg-green-200 transition-colors"
+                  >
+                    {post.category}
+                  </Link>
+                ) : (
+                  <span className="text-xs font-heading font-medium text-green-600 bg-green-100 px-2.5 py-1 rounded-full">
+                    {post.category}
+                  </span>
+                );
+              })()}
               <time className="text-sm text-gray-400" dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString("fr-FR", {
                   day: "numeric",
@@ -111,6 +128,8 @@ export default async function BlogPost({ params }: Props) {
           </div>
         </div>
       </article>
+
+      <RelatedArticles currentSlug={slug} category={post.category} />
     </>
   );
 }

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { categories } from "@/lib/categories";
 
-const baseUrl = "https://agencelavernepaysagistes.fr";
+const baseUrl = "https://www.agencelavernepaysagistes.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();

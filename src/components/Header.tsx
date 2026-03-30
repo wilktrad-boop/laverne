@@ -21,7 +21,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl">🌿</span>
             <span className="font-heading text-xl font-bold text-green-800">
-              Maison & Travaux
+              Agence Laverne
             </span>
           </Link>
 

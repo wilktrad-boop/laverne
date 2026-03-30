@@ -41,8 +41,8 @@ const categories = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Maison & Travaux",
-  url: "https://agencelavernepaysagistes.fr",
+  name: "Agence Laverne",
+  url: "https://www.agencelavernepaysagistes.fr",
   description:
     "Conseils d'experts pour l'aménagement, la rénovation et la décoration de votre maison et jardin.",
 };

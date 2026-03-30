@@ -18,19 +18,19 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: {
-    default: "Maison & Travaux | Conseils aménagement, rénovation et jardin",
-    template: "%s | Maison & Travaux",
+    default: "Agence Laverne | Conseils aménagement, rénovation et jardin",
+    template: "%s | Agence Laverne",
   },
   description:
     "Découvrez nos conseils d'experts pour l'aménagement extérieur, la rénovation, la décoration intérieure et l'énergie de votre maison.",
-  metadataBase: new URL("https://agencelavernepaysagistes.fr"),
+  metadataBase: new URL("https://www.agencelavernepaysagistes.fr"),
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "Maison & Travaux",
+    siteName: "Agence Laverne",
   },
   alternates: {
-    canonical: "https://agencelavernepaysagistes.fr",
+    canonical: "https://www.agencelavernepaysagistes.fr",
   },
 };
 

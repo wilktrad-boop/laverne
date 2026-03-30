@@ -12,6 +12,7 @@ export default function Hero() {
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/40" />
       </div>
@@ -23,9 +24,7 @@ export default function Hero() {
           </span>
 
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-green-900 leading-tight">
-            Aménagez, rénovez,{" "}
-            <span className="text-green-500">transformez</span> votre espace de
-            vie
+            Aménagez, rénovez,{" "}<span className="text-green-500">transformez</span>{" "}votre espace de vie
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">

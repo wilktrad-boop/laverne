@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://agencelavernepaysagistes.fr/sitemap.xml",
+    sitemap: "https://www.agencelavernepaysagistes.fr/sitemap.xml",
   };
 }
