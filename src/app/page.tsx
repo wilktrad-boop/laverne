@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import CategoryCard from "@/components/CategoryCard";
 import ArticleCard from "@/components/ArticleCard";
@@ -76,6 +77,33 @@ export default function Home() {
             {categories.map((cat) => (
               <CategoryCard key={cat.href} {...cat} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quiz CTA */}
+      <section className="py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border-2 border-dashed border-green-200 bg-green-50/50 p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <span className="text-5xl">🧭</span>
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="font-heading text-xl md:text-2xl font-bold text-green-900">
+                Vous ne savez pas par où commencer ?
+              </h2>
+              <p className="mt-2 text-gray-600">
+                Répondez à 5 questions et découvrez le projet qui vous
+                correspond, avec des conseils personnalisés.
+              </p>
+            </div>
+            <Link
+              href="/quiz"
+              className="inline-flex items-center px-6 py-3 rounded-xl bg-green-500 text-white font-heading font-semibold text-sm hover:bg-green-600 transition-colors shadow-lg shadow-green-500/25 flex-shrink-0"
+            >
+              Faire le quiz
+              <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

@@ -9,6 +9,7 @@ const categories = [
 
 const links = [
   { name: "Blog", href: "/blog" },
+  { name: "Quiz projet", href: "/quiz" },
   { name: "Guide des prix", href: "/guide-des-prix" },
   { name: "Conseils avant travaux", href: "/conseils-avant-travaux" },
   { name: "À propos", href: "/a-propos" },
