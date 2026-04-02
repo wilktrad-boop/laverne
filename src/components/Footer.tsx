@@ -19,6 +19,8 @@ const links = [
 const partners = [
   { name: "Vincent Construction", href: "https://vincent-construction.fr/" },
   { name: "Mil & Un Services", href: "https://www.mil-et-un-services.fr/" },
+  { name: "Adoucisseur France", href: "https://adoucisseur-france.eu/" },
+  { name: "Valence Adoucisseur", href: "https://valence-adoucisseur.fr/" },
 ];
 
 export default function Footer() {
