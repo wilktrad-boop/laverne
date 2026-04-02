@@ -9,8 +9,15 @@ const categories = [
 
 const links = [
   { name: "Blog", href: "/blog" },
+  { name: "Guide des prix", href: "/guide-des-prix" },
+  { name: "Conseils avant travaux", href: "/conseils-avant-travaux" },
   { name: "À propos", href: "/a-propos" },
   { name: "Contact", href: "/contact" },
+];
+
+const partners = [
+  { name: "Vincent Construction", href: "https://vincent-construction.fr/" },
+  { name: "Mil & Un Services", href: "https://www.mil-et-un-services.fr/" },
 ];
 
 export default function Footer() {
@@ -71,7 +78,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-green-800 text-center text-sm text-green-400">
+        {/* Partners */}
+        <div className="mt-10 pt-6 border-t border-green-800">
+          <p className="text-sm font-heading font-semibold text-green-300 mb-2">
+            Partenaires recommandés
+          </p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {partners.map((partner) => (
+              <a
+                key={partner.href}
+                href={partner.href}
+                target="_blank"
+                rel="noopener"
+                className="text-sm text-green-400 hover:text-white transition-colors"
+              >
+                {partner.name} ↗
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-green-800 text-center text-sm text-green-400">
           &copy; {new Date().getFullYear()} agencelavernepaysagistes.fr — Tous
           droits réservés
         </div>
