@@ -102,8 +102,21 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 pt-6 border-t border-green-800 text-center text-sm text-green-400">
-          &copy; {new Date().getFullYear()} agencelavernepaysagistes.fr — Tous
-          droits réservés
+          <p>
+            &copy; {new Date().getFullYear()} agencelavernepaysagistes.fr — Tous
+            droits réservés
+          </p>
+          <p className="mt-1">
+            Site édité par{" "}
+            <a
+              href="https://visibilite-locale.online/"
+              target="_blank"
+              rel="noopener"
+              className="text-green-300 hover:text-white transition-colors"
+            >
+              Visibilité Locale
+            </a>
+          </p>
         </div>
       </div>
     </footer>
