@@ -41,6 +41,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${montserrat.variable} ${lora.variable}`}>
+      <head>
+        <script
+          src="https://app.rybbit.io/api/script.js"
+          data-site-id="adc41be6a12e"
+          defer
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
         <Header />
         <main className="flex-1">{children}</main>
