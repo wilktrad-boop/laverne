@@ -172,6 +172,31 @@ const tasks: ImageTask[] = [
     width: 1024,
     height: 576,
   },
+  // New articles taille
+  {
+    key: "blog-taille-laurier-rose",
+    prompt:
+      "Closeup of pink oleander flowers (Nerium oleander) being pruned with sharp garden secateurs, bright summer Mediterranean garden, lush green foliage, professional gardening photography, natural sunlight, 8k",
+    outputPath: "public/images/blog/taille-laurier-rose.webp",
+    width: 1024,
+    height: 576,
+  },
+  {
+    key: "blog-taille-prunier",
+    prompt:
+      "Gardener pruning a mature plum tree in a French garden, using loppers on thick branches, spring orchard scene, blossoming fruit tree branches, soft morning light, professional garden photography, 8k",
+    outputPath: "public/images/blog/taille-prunier.webp",
+    width: 1024,
+    height: 576,
+  },
+  {
+    key: "blog-taille-laurier-palme",
+    prompt:
+      "Close-up of hand pruning cherry laurel hedge (Prunus laurocerasus) with secateurs, large glossy green leaves, dense garden hedge background, professional gardening photography, natural daylight, 8k",
+    outputPath: "public/images/blog/taille-laurier-palme.webp",
+    width: 1024,
+    height: 576,
+  },
 ];
 
 async function downloadImage(url: string, outputPath: string): Promise<void> {
