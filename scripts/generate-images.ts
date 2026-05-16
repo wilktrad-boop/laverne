@@ -197,6 +197,31 @@ const tasks: ImageTask[] = [
     width: 1024,
     height: 576,
   },
+  // New articles — May 2026
+  {
+    key: "blog-bambou-barriere",
+    prompt:
+      "Dense bamboo grove with tall green bamboo culms in a French garden, anti-rhizome barrier visible at the edge with HDPE plastic membrane, contained landscaping installation, lush foliage, professional landscape photography, natural daylight, 8k",
+    outputPath: "public/images/blog/bambou-envahissant-barriere-anti-rhizome.webp",
+    width: 1024,
+    height: 576,
+  },
+  {
+    key: "blog-olivier-pot",
+    prompt:
+      "Mature olive tree (Olea europaea) planted in a large terracotta pot on a sunny French terrace, silver-green foliage, twisted trunk, Mediterranean atmosphere, stone tiles, warm afternoon light, professional garden photography, 8k",
+    outputPath: "public/images/blog/olivier-en-pot-entretien-hivernage.webp",
+    width: 1024,
+    height: 576,
+  },
+  {
+    key: "blog-gazon-jaune",
+    prompt:
+      "Close-up of a French residential lawn with patches of yellow drought-stressed grass mixed with green areas, summer sunlight, garden in background, realistic garden problem photography, natural daylight, 8k",
+    outputPath: "public/images/blog/gazon-jaune-causes-solutions.webp",
+    width: 1024,
+    height: 576,
+  },
 ];
 
 async function downloadImage(url: string, outputPath: string): Promise<void> {
