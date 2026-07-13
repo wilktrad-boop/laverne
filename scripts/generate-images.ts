@@ -222,6 +222,31 @@ const tasks: ImageTask[] = [
     width: 1024,
     height: 576,
   },
+  // New articles — July 2026 (cluster taille)
+  {
+    key: "blog-taille-photinia",
+    prompt:
+      "Photinia Red Robin hedge in a French garden, dense evergreen shrub covered in bright scarlet young LEAVES at the branch tips, the red leaves are large flat oval glossy leaves identical in shape to the dark green mature leaves below them, no flowers, no petals, no berries, gardener's hand holding secateurs about to cut a shoot, professional garden photography, soft natural daylight, sharp focus, 8k",
+    outputPath: "public/images/blog/taille-photinia.webp",
+    width: 1024,
+    height: 576,
+  },
+  {
+    key: "blog-taille-thuya",
+    prompt:
+      "Gardener trimming a tall thuja hedge (Thuja occidentalis) with a hedge trimmer, dense green conifer foliage, straight French garden hedge, ladder and tarp on the ground, professional gardening photography, natural daylight, 8k",
+    outputPath: "public/images/blog/taille-thuya.webp",
+    width: 1024,
+    height: 576,
+  },
+  {
+    key: "blog-taille-lavande",
+    prompt:
+      "Hands pruning a compact lavender bush with garden shears, purple lavender flowers and silver-green foliage, Provence style garden with gravel soil, warm summer sunlight, professional gardening photography, 8k",
+    outputPath: "public/images/blog/taille-lavande.webp",
+    width: 1024,
+    height: 576,
+  },
 ];
 
 async function downloadImage(url: string, outputPath: string): Promise<void> {
@@ -236,12 +261,12 @@ async function downloadImage(url: string, outputPath: string): Promise<void> {
   await finished(Readable.fromWeb(response.body as any).pipe(fileStream));
 }
 
-async function generateImage(task: ImageTask): Promise<void> {
+async function generateImage(task: ImageTask): Promise<boolean> {
   const fullPath = path.resolve(task.outputPath);
 
   if (fs.existsSync(fullPath)) {
     console.log(`  [SKIP] ${task.key} — already exists at ${task.outputPath}`);
-    return;
+    return false;
   }
 
   console.log(`  [GEN]  ${task.key} — generating...`);
@@ -274,6 +299,7 @@ async function generateImage(task: ImageTask): Promise<void> {
   }
 
   console.log(`  [OK]   ${task.key} — saved to ${task.outputPath}`);
+  return true;
 }
 
 async function main() {
@@ -290,13 +316,14 @@ async function main() {
   }
 
   for (const task of tasks) {
+    let generated = false;
     try {
-      await generateImage(task);
+      generated = await generateImage(task);
     } catch (err) {
       console.error(`  [ERR]  ${task.key} — ${err}`);
     }
-    // Wait 12s between requests to respect rate limits
-    await new Promise((r) => setTimeout(r, 12000));
+    // Wait 12s between actual API calls to respect rate limits
+    if (generated) await new Promise((r) => setTimeout(r, 12000));
   }
 
   console.log("\n✅ Terminé !\n");
