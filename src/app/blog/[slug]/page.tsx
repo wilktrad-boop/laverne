@@ -129,7 +129,7 @@ export default async function BlogPost({ params }: Props) {
         </div>
       </article>
 
-      <RelatedArticles currentSlug={slug} category={post.category} />
+      <RelatedArticles currentSlug={slug} />
     </>
   );
 }

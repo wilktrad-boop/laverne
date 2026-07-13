@@ -1,15 +1,12 @@
 import ArticleCard from "@/components/ArticleCard";
-import { getPostsByCategory } from "@/lib/blog";
+import { getRelatedPosts } from "@/lib/blog";
 
 interface RelatedArticlesProps {
   currentSlug: string;
-  category: string;
 }
 
-export default function RelatedArticles({ currentSlug, category }: RelatedArticlesProps) {
-  const related = getPostsByCategory(category)
-    .filter((p) => p.slug !== currentSlug)
-    .slice(0, 3);
+export default function RelatedArticles({ currentSlug }: RelatedArticlesProps) {
+  const related = getRelatedPosts(currentSlug, 3);
 
   if (related.length === 0) return null;
 
