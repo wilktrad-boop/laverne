@@ -109,12 +109,12 @@ export default function Footer() {
           <p className="mt-1">
             Site édité par{" "}
             <a
-              href="https://visibilite-locale.online/"
+              href="https://timevo.io/"
               target="_blank"
               rel="noopener"
               className="text-green-300 hover:text-white transition-colors"
             >
-              Visibilité Locale
+              Timevo.io
             </a>
           </p>
         </div>
