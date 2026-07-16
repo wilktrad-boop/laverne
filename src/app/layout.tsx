@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.agencelavernepaysagistes.fr",
   },
+  other: {
+    linkavista: "942365a1a8007c0990a8cb0da305565c707ecc2e",
+  },
 };
 
 export default function RootLayout({
